@@ -1,5 +1,7 @@
 # Docker lecture (exercises)
 
+Install the docker extension!
+
 ## 1. Hello World!
 
 Build a small Dockerfile that uses the latest version of the official "hello world" example from Docker.io; and build its image
