@@ -1,0 +1,24 @@
+services:
+  backend:
+    image: node:24
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    stdin_open: true
+    tty: true
+    ports:
+      - "4000:4000"
+    networks:
+      - app-network
+
+  frontend:
+    image: curlimages/curl:latest
+    stdin_open: true
+    tty: true
+    command: sleep infinity
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -23,6 +23,6 @@ docker run -it --rm --name "frontend" curlimages/curl:latest sh
 docker network create -d bridge year-2 (docker network ls)
 
 docker run -it --rm -v "$(pwd):/app" -p 4000:4000 --name "backend" --network "year-2" node:24 sh
-docker run -it --rm --name "frontend" --network "year-2 "curlimages/curl:latest sh
+docker run -it --rm --name "frontend" --network "year-2" curlimages/curl:latest sh
 > curl http://backend:4000/health
 ```
